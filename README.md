@@ -14,4 +14,18 @@ apt-get install libsdl1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev
 ```
 g++ main.cpp snake.cpp node.cpp -lSDL -lSDL_mixer -lSDL_ttf
 ```
+
+## using cmake
+```
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=${PWD} ..
+make
+make install
+```
+
+## using Nix
+```
+nix-build
+```
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*ENJOY\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*

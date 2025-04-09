@@ -9,7 +9,7 @@ snake::snake(int width,int height,int l)
     screen=SDL_SetVideoMode(width,height,24,SDL_HWSURFACE|SDL_ASYNCBLIT);
 
     TTF_Init();
-    font=TTF_OpenFont("Font/journal.ttf",100);
+    font=TTF_OpenFont("assets/font/journal.ttf",100);
     color.b=color.g=color.r=0;
     text=TTF_RenderText_Solid(font,"Ready ...",color);
 
@@ -21,9 +21,9 @@ snake::snake(int width,int height,int l)
     R_Food.y=l*F_Rand(height/l -1);
     R_Food.h=R_Food.w=l;
 
-    background=SDL_LoadBMP("Images/background.bmp");
-    noeud=SDL_DisplayFormat(SDL_LoadBMP("Images/node.bmp"));
-    food=SDL_DisplayFormat(SDL_LoadBMP("Images/food.bmp"));
+    background=SDL_LoadBMP("assets/images/background.bmp");
+    noeud=SDL_DisplayFormat(SDL_LoadBMP("assets/images/node.bmp"));
+    food=SDL_DisplayFormat(SDL_LoadBMP("assets/images/food.bmp"));
 
     SDL_SetColorKey(noeud,SDL_SRCCOLORKEY,SDL_MapRGB(screen->format,0xff,0,0));
     SDL_SetColorKey(food,SDL_SRCCOLORKEY,SDL_MapRGB(screen->format,0,0,0xff));

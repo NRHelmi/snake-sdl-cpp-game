@@ -19,9 +19,9 @@ int main()
     //Intro
 
         Mix_OpenAudio(22050,AUDIO_S16SYS,2,128);
-        music=Mix_LoadMUS("Music/stronger.mp3");
+        music=Mix_LoadMUS("assets/music/stronger.mp3");
         Mix_PlayMusic(music,-1);
-        music=Mix_LoadMUS("Music/snake.wav");
+        music=Mix_LoadMUS("assets/music/snake.wav");
         s.Draw_Bg();
         s.WaitKey();
         Mix_PlayMusic(music,-1);
@@ -49,7 +49,7 @@ int main()
         }
 
         Mix_FreeMusic(music);
-        music=Mix_LoadMUS("Music/game_over.wav");
+        music=Mix_LoadMUS("assets/music/game_over.wav");
         Mix_PlayMusic(music,-1);
 
         SDL_Delay(800);
